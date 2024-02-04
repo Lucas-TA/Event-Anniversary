@@ -1,0 +1,34 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+
+    &--primary {
+        color: #fff;
+        cursor: pointer;
+        background-color: variables.$primaryButton;
+    }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        width: 100%;
+    }
+}
+.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: rgb(41, 41, 41);
+}
